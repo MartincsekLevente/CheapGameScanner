@@ -1,0 +1,33 @@
+{
+  "name": "CheapGameScanner",
+  "version": "1.0.0",
+  "description": "For scanning cheap game prices from third party key re-seller websites",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartincsekLevente/CheapGameScanner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartincsekLevente/CheapGameScanner/issues"
+  },
+  "homepage": "https://github.com/MartincsekLevente/CheapGameScanner#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cheerio": "^1.0.0-rc.12",
+    "exceljs": "^4.4.0",
+    "node": "^22.0.0",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cheerio": "^0.22.35",
+    "@types/exceljs": "^1.3.0"
+  }
+}
