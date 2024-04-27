@@ -3,6 +3,8 @@ import puppeteer from 'puppeteer';
 
 export class Scraper {
     private readonly CHEAPEST_PRICE_SELECTOR = '#offers_table > div:nth-child(1) > div.offers-table-row-cell.buy-btn-cell > a.d-none.d-lg-block.buy-btn.x-offer-buy-btn.text-center > span'
+    private readonly URL_PREFIX = 'https://www.allkeyshop.com/blog/buy-'
+    private readonly URL_SUFFIX = '-cd-key-compare-prices/'
 
     public async main() {
         try {
@@ -14,8 +16,7 @@ export class Scraper {
             }
 
             const price = this.scrapePrices(html);
-            console.log(gameName + ":");
-            console.log("Cheapest price:", price);
+            console.log(gameName + ":\nCheapest price:", price);
         } catch (error) {
             console.error('Error:', error);
         }
@@ -23,7 +24,7 @@ export class Scraper {
 
     private makeUrlFromName(gameName: string): string {
         const formattedGameName = gameName.toLowerCase().replace(/\s+/g, "-");
-        return `https://www.allkeyshop.com/blog/buy-${formattedGameName}-cd-key-compare-prices/`;
+        return this.URL_PREFIX+formattedGameName+this.URL_SUFFIX;
     }
 
     private async fetchPageWithHtml(url: string): Promise<string | null> {
