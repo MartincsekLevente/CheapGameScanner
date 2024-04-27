@@ -4,7 +4,7 @@
   "description": "For scanning cheap game prices from third party key re-seller websites",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && node dist/index.js",
+    "start": "tsc && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "cheerio": "^1.0.0-rc.12",
     "exceljs": "^4.4.0",
     "node": "^22.0.0",
+    "puppeteer": "^22.7.1",
     "typescript": "^5.4.5"
   },
   "devDependencies": {

@@ -1,3 +1,5 @@
 const fs = require("fs");
+import { Scraper } from "./scraper";
 
-console.log("Hello World!");
+const scraper = new Scraper();
+scraper.main();
